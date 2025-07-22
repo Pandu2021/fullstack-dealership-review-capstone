@@ -32,7 +32,7 @@ ALLOWED_HOSTS = [
     'fullstack-dealership-review-capstone.onrender.com',
     'localhost',
     '127.0.0.1',
-]]
+]
 
 
 # Application definition
