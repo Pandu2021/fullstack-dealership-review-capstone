@@ -28,7 +28,10 @@ SECRET_KEY = 'django-insecure-f-xsbt!8%0#a#!ym#ou+2c)@n$4qvdg((_&9wff%@!q-u8oav#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fullstack-dealership-review-capstone.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]]
 
 
 # Application definition
