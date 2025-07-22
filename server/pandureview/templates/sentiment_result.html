@@ -1,0 +1,10 @@
+<h2>Sentiment Analyzer</h2>
+<form method="get">
+  <input type="text" name="review" placeholder="Enter your review..." />
+  <button type="submit">Analyze</button>
+</form>
+
+{% if sentiment %}
+  <p><strong>Review:</strong> {{ review }}</p>
+  <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+{% endif %}

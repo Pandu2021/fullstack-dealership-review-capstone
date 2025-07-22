@@ -1,0 +1,8 @@
+<h2>List of Car Makes</h2>
+<ul>
+  {% for carmake in carmakes %}
+    <li>{{ carmake.name }}</li>
+  {% empty %}
+    <li>No car makes available</li>
+  {% endfor %}
+</ul>

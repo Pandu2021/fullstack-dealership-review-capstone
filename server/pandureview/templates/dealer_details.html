@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dealer Details</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <h2>Dealer Detail</h2>
+  {% if dealer %}
+    <p><strong>Name:</strong> {{ dealer.name }}</p>
+    <p><strong>City:</strong> {{ dealer.city }}</p>
+    <p><strong>State:</strong> {{ dealer.state }}</p>
+    <p><strong>ID:</strong> {{ dealer.id }}</p>
+  {% else %}
+    <p>Dealer not found.</p>
+  {% endif %}
+
+  <hr>
+  <h3>Submit Your Review</h3>
+  <form method="post">
+    {% csrf_token %}
+    <textarea name="review" rows="4" cols="60" placeholder="Write your review..."></textarea><br><br>
+    <button type="submit">Analyze</button>
+  </form>
+
+  {% if review %}
+    <h4>Your Review:</h4>
+    <p>{{ review }}</p>
+    <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+  {% endif %}
+
+  <br><a href="/">← Back to Home</a>
+</body>
+</html>

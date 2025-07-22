@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Review</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <h2>Submit Your Car Review</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    <textarea name="review" rows="5" cols="60" placeholder="Write your review..."></textarea><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  {% if review %}
+    <h3>Your Review:</h3>
+    <p>{{ review }}</p>
+  {% endif %}
+</body>
+</html>

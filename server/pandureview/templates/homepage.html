@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Best Cars Dealership</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <h2>Welcome to Best Cars Dealership</h2>
+
+  <div style="text-align:center;">
+    <a href="/about/">About Us</a>
+    <a href="/contact/">Contact Us</a>
+  </div>
+
+  <ul>
+    {% for dealer in dealers %}
+      <li>{{ dealer.name }} - {{ dealer.state }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
